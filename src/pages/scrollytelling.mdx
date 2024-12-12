@@ -1,0 +1,18 @@
+import Container from "src/components/Container.astro";
+import PageLayout from "src/layouts/PageLayout.astro";
+import { SITE } from "src/consts.ts";
+import { default as STM } from "src/components/Scrollytelling.astro";
+
+<PageLayout title={'Scrollytelling Demo'} description={SITE.description}>
+   
+    <STM
+        container="maplibre-scrollytelling-map"
+        latitude={40.7805}
+        longitude={-73.9741}
+        zoom={12}
+        interactive={false}
+        mapstyle="public/style.json"
+        containerstyle="width: 100%; height: 50vh"
+    />
+
+</PageLayout>
